@@ -1,0 +1,30 @@
+/* Header section */
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: black;
+  background-image: url("../images/80.jpg");
+  background-size: cover;
+  justify-content: flex-end;
+
+  a {
+    margin-top: 30px;
+    margin-right: 20px;
+    color: rgb(47, 75, 165);
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    height: 20px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+
+    &:hover {
+      transform: scale(1.3);
+      color: rgb(34, 49, 134);
+    }
+  }
+}

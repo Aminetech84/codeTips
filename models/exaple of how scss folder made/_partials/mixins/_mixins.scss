@@ -1,0 +1,10 @@
+/* Mixins*/
+
+@mixin section {
+  display: flex;
+  width: 95%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+ 
+}

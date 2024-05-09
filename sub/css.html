@@ -6,6 +6,100 @@
     <title>CSS</title>
 </head>
 <body>
-    
+    <h4>FLEXBOX</h4>
+    <p>/* flex container *parent element* */
+        .b1 {
+          /* Optional properties for flex container*/
+          /*
+            flex-direction: ;
+            flex-wrap: ;
+            flex-flow: ;
+            justify-content: ;
+            align-items: ;
+            align-content: ;
+            */
+          //---------------------------------------------------------//
+          /*  display: flex; */
+          //justify-content: space-evenly; /* put content to the: right, center or left of the page or change space between elements *always on the main axis* */
+        
+          //align-items: center; /* align items based on height *the element needs a height for it to work* */
+        
+          //flex-wrap: wrap; /* add rows when width is smaller than the total width of the elements width.*/
+        
+          // cannot have a max-width on child of an element with max-width.
+        
+          // use "%" for containers to adopt the free space, use rem/em for elements to hold their size and flex wrap can work on them / use "%" then use wrap and fixed w/h in media queries.
+        
+          text-align: center;
+          e {
+            /* Optional properties for flex item *child of flex* */
+            /*
+            order: ;
+            flex-grow: ;
+            flex-shrink: ;
+            flex-basis: ;
+            align-self: ; // self-align without following the other elements alignment
+            //flex item can also be a flex container
+            */
+            //--------------------------------------------------//
+            //order: 2;  /*change order of elements without changing the HTML*/
+            //flex-basis: auto;  /*default size "width" before applying "flex-grow" or "flex-shrink" *can be set on container or item* */
+            //flex-grow: 2;  /*grow based on flex-basis*/
+            //flex-shrink: 2;  /*shrink based on flex-basis*/
+            //flex: 1 0 5em; /* flex: flex-grow flex-shrink flex-basis */
+            //
+            //flex-grow: ;  worked only on small content 
+            //flex-grow works better when flex-basis: 0;
+            text-align: center;
+          }
+        }</p>
+    <p>Flexbox
+        /* flex container *parent element* */
+        .b1 {
+          /* Optional properties for flex container*/
+          /*
+            flex-direction: ;
+            flex-wrap: ;
+            flex-flow: ;
+            justify-content: ;
+            align-items: ;
+            align-content: ;
+            */
+          //---------------------------------------------------------//
+          /*  display: flex; */
+          //justify-content: space-evenly; /* put content to the: right, center or left of the page or change space between elements *always on the main axis* */
+        
+          //align-items: center; /* align items based on height *the element needs a height for it to work* */
+        
+          //flex-wrap: wrap; /* add rows when width is smaller than the total width of the elements width.*/
+        
+          // cannot have a max-width on child of an element with max-width.
+        
+          // use "%" for containers to adopt the free space, use rem/em for elements to hold their size and flex wrap can work on them / use "%" then use wrap and fixed w/h in media queries.
+        
+          text-align: center;
+          e {
+            /* Optional properties for flex item *child of flex* */
+            /*
+            order: ;
+            flex-grow: ;
+            flex-shrink: ;
+            flex-basis: ;
+            align-self: ; // self-align without following the other elements alignment
+            //flex item can also be a flex container
+            */
+            //--------------------------------------------------//
+            //order: 2;  /*change order of elements without changing the HTML*/
+            //flex-basis: auto;  /*default size "width" before applying "flex-grow" or "flex-shrink" *can be set on container or item* */
+            //flex-grow: 2;  /*grow based on flex-basis*/
+            //flex-shrink: 2;  /*shrink based on flex-basis*/
+            //flex: 1 0 5em; /* flex: flex-grow flex-shrink flex-basis */
+            text-align: center;
+          }
+        }
+        
+        // EM follows the font-size</p>
+
+
 </body>
 </html>

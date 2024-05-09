@@ -1,0 +1,23 @@
+@import './header';
+
+@mixin flexC($dir) {
+    display: flex;
+    color: $dir;
+}
+
+$pramaryBtn: rgb(231, 222, 222);
+
+body {
+    background: $pramaryBtn;
+    @include flexC(blue);
+    h2 {
+        background: #000;
+        &:hover {
+            color: aqua;
+        }
+    }
+}
+
+div {
+    @extend body;
+}

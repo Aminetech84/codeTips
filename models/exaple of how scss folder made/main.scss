@@ -1,0 +1,19 @@
+/* Global Values*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Imports */
+@import "./_partials/layout/header";
+@import "./_partials/layout/about";
+@import "./_partials/components/hr";
+@import "./_partials/layout/services";
+@import "./_partials/layout/gallery";
+@import "./_partials/layout/footer";
+@import "./_partials/util/media";
