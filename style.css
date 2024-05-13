@@ -3,25 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #e2e2e2;
-  
 }
+
 h1 {
   color: rgb(81, 37, 201);
   overflow: auto;
 }
+
 .wrapper {
   display: flex;
-  
 }
+
 .nav {
   width: 20vw;
-  
 }
+
 .content {
-    height: 80vh;
+  height: 80vh;
 }
+
 .hide {
   display: none;
 }
@@ -29,4 +32,4 @@ h1 {
 iframe {
   width: 80vw;
   height: 99vh;
-}
+}/*# sourceMappingURL=style.css.map */

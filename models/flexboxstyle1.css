@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* flex container *parent element* */
+.b1 {
+  /* Optional properies for flex container*/
+  /*
+    flex-direction: ;
+    flex-wrap: ;
+    flex-flow: ;
+    justify-content: ;
+    align-items: ;
+    align-content: ;
+    */
+  /*  display: flex; */
+  text-align: center;
+}
+.b1 e {
+  /* Optional properies for flex item *child of flex* */
+  /*
+  order: ;
+  flex-grow: ;
+  flex-shrink: ;
+  flex-basis: ;
+  align-self: ; // self-align without following the other elements alignment
+  //flex item can also be a flex container
+  */
+  text-align: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 70em;
+  margin: 0% auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  border: 0.1em #46d solid;
+  /*height: auto;
+   width: 90%;
+  margin: auto;*/
+}
+
+.d {
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 90%;
+  //min-height: 20em;
+
+  // margin: 10% auto;*/
+}
+.d .s10 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+}
+.d .s10 .y {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 1%;
+  height: 10em;
+}
+.d .s10 .y .u11 {
+  background-color: #46d;
+  width: 80%;
+  max-width: 7em;
+  height: 5em;
+  align-self: center;
+}
+.d .s10 .y .u12 {
+  width: 80%;
+  max-width: 7em;
+  height: 5em;
+  align-self: center;
+}
+.d .s10 .x {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  height: 40%;
+  margin: 1%;
+}
+.d .s10 .x .u13 {
+  width: 20%;
+  max-width: 7em;
+  height: 5em;
+  align-self: center;
+}
+.d .s10 .x .u14 {
+  width: 20%;
+  max-width: 7em;
+  height: 5em;
+  align-self: center;
+}/*# sourceMappingURL=flexboxstyle1.css.map */

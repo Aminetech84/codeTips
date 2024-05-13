@@ -38,7 +38,8 @@ header a:hover {
   color: rgb(34, 49, 134);
 }
 
-/* Imports */ /* Mixins*/
+/* Imports */
+/* Mixins*/
 /* About section */
 .about-us {
   display: flex;
@@ -75,7 +76,8 @@ hr {
   margin: 3% auto;
 }
 
-/* Imports */ /* Mixins*/
+/* Imports */
+/* Mixins*/
 /* Services Section */
 .services {
   display: flex;

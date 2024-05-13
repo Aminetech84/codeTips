@@ -1,0 +1,11 @@
+body, div {
+  background: rgb(231, 222, 222);
+  display: flex;
+  color: blue;
+}
+body h2, div h2 {
+  background: #000;
+}
+body h2:hover, div h2:hover {
+  color: aqua;
+}/*# sourceMappingURL=scssStyle1.css.map */
