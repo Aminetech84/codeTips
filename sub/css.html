@@ -137,6 +137,43 @@
             }
           }
           
+AI enhancement
+
+/* Flex Container (Parent Element) */
+.b1 {
+  display: flex; /* Establishes a flex container */
+  flex-direction: row; /* Defines the direction of flex items (row, column, etc.) */
+  flex-wrap: wrap; /* Allows flex items to wrap onto multiple lines */
+  flex-flow: row wrap; /* Shorthand for flex-direction and flex-wrap */
+  justify-content: space-evenly; /* Aligns flex items along the main axis */
+  align-items: center; /* Aligns flex items along the cross axis */
+  align-content: stretch; /* Aligns lines of flex items within the flex container */
+  text-align: center; /* Aligns inline content within the flex items */
+}
+
+/* Flex Item (Child Element) */
+.e {
+  order: 2; /* Changes the order of the flex item */
+  flex-grow: 1; /* Defines the ability for a flex item to grow */
+  flex-shrink: 1; /* Defines the ability for a flex item to shrink */
+  flex-basis: auto; /* Defines the default size of a flex item */
+  align-self: auto; /* Allows a single flex item to align itself independently */
+  flex: 1 0 auto; /* Shorthand for flex-grow, flex-shrink, and flex-basis */
+  text-align: center; /* Aligns inline content within the flex item */
+}
+
+Here are some tips:
+
+flex-direction: Defines the main axis and direction (e.g., row, column).
+flex-wrap: Allows items to wrap to new lines (nowrap, wrap, wrap-reverse).
+justify-content: Distributes space between and around items along the main axis.
+align-items: Aligns items along the cross axis.
+flex-grow: Controls the proportion of available space taken up by the item when the container is larger than the combined items.
+flex-shrink: Determines how an item will shrink relative to the rest of the items in the container when there isn’t enough space.
+flex-basis: Sets the initial size of an item before the remaining space is distributed.
+order: Changes the visual order of the item.
+align-self: Allows the default alignment to be overridden for individual flex items.
+Remember, percentages are great for responsive design, and rem/em units help maintain scalability for your flex items.
         </code>
         
       </pre>
