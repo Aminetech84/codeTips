@@ -9,6 +9,10 @@ body {
   color: #eee;
 }
 
+.srl {
+  scrollbar-width: none;
+}
+
 p,
 li {
   margin-left: 2rem;
@@ -54,7 +58,15 @@ a {
 }
 
 iframe {
-  margin: 0 5%;
-  width: 90%;
+  margin: 0 2%;
+  width: 96%;
   height: 90vh;
-}/*# sourceMappingURL=style.css.map */
+}
+
+details {
+  margin-left: 5em;
+}
+
+/*body::-webkit-scrollbar {
+  display: none;
+}*//*# sourceMappingURL=style.css.map */

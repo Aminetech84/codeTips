@@ -8,6 +8,11 @@ body {
   background-color: #111;
   color: #eee;
   //margin: 0 2%;
+  //scrollbar-width: none;
+}
+
+.srl {
+  scrollbar-width: none;
 }
 
 p,
@@ -27,34 +32,49 @@ h6 {
   font-family: "Times New Roman", Times, serif;
   color: #a95e42;
 }
+
 .wrapper {
   //display: flex;
   width: 95vw;
   height: 95vh;
 }
+
 .nav {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
 }
+
 a {
-  margin:0 .3em;
-  
+  margin: 0 0.3em;
+
   width: 5rem;
   text-align: center;
 }
+
 .content {
   //width: 80vw;
   text-wrap: pretty;
   //height: 80vh;
 }
+
 .hide {
   display: none;
 }
 
 iframe {
-  margin: 0 5%;
-  width: 90%;
+  margin: 0 2%;
+  width: 96%;
   height: 90vh;
 }
+
+details {
+  margin-left: 5em;
+}
+
+/*body::-webkit-scrollbar {
+  display: none;
+}*/
+
+
