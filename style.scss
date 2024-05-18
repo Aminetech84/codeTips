@@ -7,12 +7,14 @@
 body {
   background-color: #111;
   color: #eee;
+  //margin: 0 2%;
 }
 
-p, li {
- line-height: 1.5em;
+p,
+li {
+  margin-left: 2rem;
+  line-height: 1.5em;
   text-wrap: pretty;
-  
 }
 
 h1,
@@ -23,20 +25,27 @@ h5,
 h6 {
   line-height: 2rem;
   font-family: "Times New Roman", Times, serif;
-  color: #cefe99;
+  color: #a95e42;
 }
 .wrapper {
-  display: flex;
-  // width: 100vw;
-  height: 100vh;
+  //display: flex;
+  width: 95vw;
+  height: 95vh;
 }
 .nav {
-  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+a {
+  margin:0 .3em;
+  
+  width: 5rem;
+  text-align: center;
 }
 .content {
   //width: 80vw;
-  border: 0.5em solid #cefefe;
- 
   text-wrap: pretty;
   //height: 80vh;
 }
@@ -45,7 +54,7 @@ h6 {
 }
 
 iframe {
-  width: 80vw;
+  margin: 0 5%;
+  width: 90%;
   height: 90vh;
-  
 }
