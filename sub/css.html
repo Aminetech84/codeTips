@@ -7,26 +7,22 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-
-    
-    
-
     <h3>FLEXBOX</h3>
     <h4>Flex container *parent element*</h4>
     <h5>/* Main properties for flex container*/</h5>
     <ul>
       <li>
-        justify-content: Distributes space between and around
-        items or put content to the: right, center or left of the page or change
-        space between elements *always on the main axis*
+        justify-content: Distributes space between and around items or put
+        content to the: right, center or left of the page or change space
+        between elements *always on the main axis*
       </li>
       <li>
-        align-items: align items based on height *the element needs a
-        height for it to work*
+        align-items: align items based on height *the element needs a height for
+        it to work*
       </li>
       <li>
-        flex-wrap: add rows when width is smaller than the total width
-        of the elements width.
+        flex-wrap: add rows when width is smaller than the total width of the
+        elements width.
       </li>
       <li>
         flex-direction: Defines the main axis and direction (e.g., row, column).
@@ -49,7 +45,7 @@
           <li>Use "%" then use wrap and fixed w/h in media queries.</li>
         </ul>
       </li>
-      <li> EM follows the font-size</li>
+      <li>EM follows the font-size</li>
       <li>
         percentages are great for responsive design, and rem/em units help
         maintain scalability for your flex items.
@@ -77,11 +73,10 @@
         flex-flow: column; /* Shorthand for flex-direction and flex-wrap */
         align-content: stretch; /* Aligns lines of flex items within the flex container */
       }
-      
     </code>
   </pre>
-
-    <hr />
+    <hr class="section" />
+    <br />
 
     <h4>Flex container *Flex Item (Child Element)*</h4>
     <h5>/* Main properties for flex item*/</h5>
@@ -129,5 +124,92 @@
       }
         </code>
   </pre>
+
+    <hr />
+    <br />
+
+    <h3>GRID</h3>
+    <pre><code>
+
+    /* Grid container *parent element* */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); //to ger responsive 
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: 22% 22% 22% ; // create columns, the number of values passed represent the number of columns created, and their size.
+    
+     /* grid-template-areas: 
+      'header header header'
+      'nav main sidebar'
+      'nav footer';*/ // works with grid-template-columns and grid-template-rows, the name repetion is meaning of spreading // refrence , crash course travisy media for grid
+      grid-template-columns: repeat(3, 1fr); //values for columns can be put in diffrent units or mixed ways of defining them.
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); //to ger responsive 
+      width: clamp(200px, 50%, 600px); //(min, preferred, max).
+    
+    justify-content: center; // just like flexbox
+    
+    align-items: ; //just like flexbox
+    
+    gap: ; // works as a margin, work also in flexbox
+    
+    grid-auto-flow: column; // get content to fill the width, just like flexbox do by default
+    
+    grid-auto-rows: minmax(10em, auto); //sets the height od columns, can work as height or if used with minmax(), can be as a min-height
+    
+    grid-template-rows: ; // works the same as grid-template-columns, the height is the height of the rows is the hight of the row with the most contant.
+    
+.parent {
+  display: grid;
+
+  /* Optional properties for grid container*/
+
+display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-gap: ;
+    grid-auto-rows: ;
+    grid-auto-columns: ;
+    grid-template-areas: ;
+    justify-content: ;
+    align-items: ;
+    
+}
+
+</code></pre>
+    <hr class="section" />
+    <br />
+    <pre><code>
+    .child {
+      /* Optional properties for grid item *child of grid* */
+      
+        grid-column: ;
+        grid-row: ;
+        grid-area: ;
+        align-self: ;
+        justify-self: ;
+    }
+    .a {
+      // max-width: 5em;
+      // height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // align-self: ; //just like flexbox
+      //justify-self: ; // just like align-self
+      
+      &:nth-child(1) {
+        /* spread a column to go over more columns
+        // same way with 
+        grid-row-start: ;
+        grid-row-end: ;
+        grid-row: ;
+        ****************
+        grid-column-start: 1;
+        grid-column-end: 4; // number should be bigger than 2
+        grid-column: 1 / 3; //shorter way*/
+        }
+      }
+    
+    
+
+  </code></pre>
   </body>
 </html>

@@ -14,7 +14,7 @@ a {
   box-sizing: border-box;
 }
 
-/* flex container *parent element* */
+/* Grid container *parent element* */
 .parent {
   display: grid;
 
@@ -32,7 +32,7 @@ display: grid;
     */
 }
 .child {
-  /* Optional properies for grid item *child of grid* */
+  /* Optional properties for grid item *child of grid* */
   /*
     grid-column: ;
     grid-row: ;
@@ -71,7 +71,7 @@ div {
 
 //gap: ; // works as a margin, work also in flexbox
 
-//grid-auto-flow: column; // get contant to fill the width, just like flexbox do by default
+//grid-auto-flow: column; // get content to fill the width, just like flexbox do by default
 
 //grid-auto-rows: minmax(10em, auto); //sets the height od columns, can work as height or if used with minmax(), can be as a min-height
 
