@@ -43,7 +43,7 @@ h6 {
 
 .nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -72,7 +72,7 @@ a {
 iframe {
   margin: 0 2%;
   width: 96%;
-  height: 82%;
+  height: 88vh;
 }
 
 details {
