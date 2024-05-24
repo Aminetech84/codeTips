@@ -9,6 +9,10 @@ body {
   color: #eee;
 }
 
+div {
+  width: 100%;
+}
+
 .srl {
   scrollbar-width: none;
 }
