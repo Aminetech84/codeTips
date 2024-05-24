@@ -21,3 +21,409 @@ body {
 div {
     @extend body;
 }
+
+
+/* MORE INFO */
+
+// Variables
+$primary-color: #333;
+$secondary-color: #007bff;
+$font-stack: 'Helvetica, Arial, sans-serif';
+
+// Mixins
+@mixin box-shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+
+// Base styles
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header {
+  background: $secondary-color;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  @include box-shadow(0px, 0px, 10px, rgba(0, 0, 0, 0.1));
+
+  h2 {
+    color: $secondary-color;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    margin: 10px 0;
+  }
+}
+
+/* more info */
+
+// styles.scss
+
+// Variables
+$primary-color: #007bff;
+$font-stack: 'Helvetica, sans-serif';
+
+// Mixins
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Base styles
+body {
+  color: $primary-color;
+  font-family: $font-stack;
+}
+
+// Example component using nesting and mixins
+.button {
+  @include border-radius(5px);
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Responsive utilities
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 600px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  }
+}
+
+.container {
+  width: 100%;
+
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+
+  @include respond-to(tablet) {
+    width: 50%;
+  }
+}
+
+/* 1. Nesting: SCSS allows you to nest CSS selectors in a way that follows the same visual hierarchy of your HTML.
+ */
+
+nav {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+/* 2. Variables: Variables let you store values (like colors, fonts, or any CSS value) that you reuse throughout your stylesheet.
+ */
+
+$primary-color: #007bff;
+$font-stack: 'Helvetica, sans-serif';
+
+body {
+  color: $primary-color;
+  font-family: $font-stack;
+}
+/* 3. Partials and Imports: Partials are small SCSS files that you can include in other SCSS files. Use the @import directive to include these partials in a main SCSS file.
+ */
+
+// _variables.scss
+$primary-color: #007bff;
+
+// main.scss
+//@import 'variables';
+
+body {
+  color: $primary-color;
+}
+/* 4. Mixins: Mixins allow you to create reusable chunks of code that can be included in other selectors.
+ */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.button {
+  @include border-radius(10px);
+}
+/* 5. Extend/Inheritance: @extend allows you to share a set of CSS properties from one selector to another.
+ */
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+/* 6. Operators: SCSS supports standard math operators like +, -, *, and / for performing calculations.
+ */
+.container {
+  width: 100%;
+}
+
+.sidebar {
+  width: 300px;
+  float: left;
+}
+
+.main-content {
+  width: calc(100% - 300px);
+  float: left;
+}
+/* 7. Functions: You can define your own functions to use in your SCSS code.
+ */
+@function calculate-rem($size) {
+  @return $size / 16 * 1rem;
+}
+
+body {
+  //font-size: calculate-rem(16px);
+}
+/* 8. Control Directives: Use control directives like @if, @for, @each, and @while to apply styles based on conditions or to loop through a list of items.
+ */
+@for $i from 1 through 3 {
+  .column-#{$i} {
+   // width: 100% / $i;
+  }
+}
+
+@each $color in red, green, blue {
+ // .#{$color}-text {
+  //  color: $color;
+ // }
+}
+
+/* 9. Avoid Deep Nesting: Deeply nested selectors can lead to overly specific and hard-to-maintain CSS. Keep nesting to a maximum of 3 levels deep to avoid specificity issues.
+ */
+// Bad
+.header {
+  .nav {
+    ul {
+      li {
+        a {
+          color: blue;
+        }
+      }
+    }
+  }
+}
+
+// Good
+.header .nav ul li a {
+  color: blue;
+}
+/* 10. Use Utility Classes: Instead of writing complex styles for common properties like margins, paddings, or flex properties, use utility classes. This promotes reuse and reduces redundancy.
+ */
+
+// Utility classes
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+
+.flex { display: flex; }
+.justify-center { justify-content: center; }
+/* 3. Modular SCSS with BEM: Combine BEM (Block Element Modifier) methodology with SCSS modules to keep your styles organized and scalable.
+ */
+
+// Using BEM and SCSS modules
+.block {
+  &__element {
+    // Styles
+  }
+
+  &--modifier {
+    // Styles
+  }
+}
+/* 11. Abstract Common Styles: Abstract common styles into mixins or placeholders to avoid repetition and maintain consistency across your project.
+ */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  @include flex-center;
+}
+/* 12. Optimize for Performance: Minimize the use of complex selectors and focus on class-based selectors to enhance CSS performance. Avoid using tag and ID selectors unless necessary.
+ */
+
+// Prefer classes over tags and IDs
+.btn-primary {
+  background-color: blue;
+  color: white;
+}
+
+/* 13. Leverage CSS Grid and Flexbox: While SCSS provides powerful features, modern CSS layout techniques like Grid and Flexbox can often simplify your layout code significantly.
+ */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+/* 14. Conditional Logic: Use SCSS conditional logic wisely to create adaptive and context-aware styles.
+ */
+
+$theme: dark;
+
+body {
+  @if $theme == dark {
+    background-color: #333;
+    color: #fff;
+  } @else {
+    background-color: #fff;
+    color: #000;
+  }
+}
+/* 15. Automatic Prefixing: Use Autoprefixer with your build tools to automatically add vendor prefixes, so you don't have to write them manually.
+ */
+
+// SCSS
+.transform {
+  transform: rotate(45deg);
+}
+
+// Output with Autoprefixer
+.transform {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* 16. DRY (Don't Repeat Yourself): Avoid repeating yourself by making use of SCSS functions, mixins, and loops. This keeps your codebase smaller and easier to maintain.
+ */
+
+@mixin button-styles($bg-color) {
+  background-color: $bg-color;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.primary-button {
+  @include button-styles(blue);
+}
+
+.secondary-button {
+  @include button-styles(green);
+}
+/* 17. Global Configuration File: Create a _config.scss file where you keep all your global variables, mixins, and functions. This centralizes your configuration and makes it easier to update.
+ */
+
+// _config.scss
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-stack: 'Helvetica, sans-serif';
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+/* 18. Code Organization: Organize your SCSS files into a logical structure. Use folders like base, components, layouts, utilities, and themes to keep your project organized.
+ */
+
+// SCSS folder structure
+/* scss/
+  ├── base/
+  │   ├── _reset.scss
+  │   ├── _typography.scss
+  ├── components/
+  │   ├── _buttons.scss
+  │   ├── _cards.scss
+  ├── layouts/
+  │   ├── _header.scss
+  │   ├── _footer.scss
+  ├── utilities/
+  │   ├── _mixins.scss
+  │   ├── _variables.scss
+  ├── themes/
+  │   ├── _dark-theme.scss
+  │   ├── _light-theme.scss
+  └── main.scss */
+/* 19. Responsive Design: Create responsive SCSS by using media queries and creating responsive utility classes.
+ */
+
+// Responsive utilities
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 600px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  }
+}
+
+.container {
+  width: 100%;
+
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+
+  @include respond-to(tablet) {
+    width: 50%;
+  }
+}
+/* These advanced tips should help you leverage SCSS more effectively in your projects, making your codebase cleaner, more efficient, and easier to maintain.
+ */
+
+
+
