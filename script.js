@@ -20,6 +20,34 @@ document.querySelectorAll("a").forEach((link) => {
   });
 });
 
+
+
+/* document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('#nav a');
+  const iframes = document.querySelectorAll('#content iframe');
+
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      iframes.forEach(iframe => {
+        iframe.classList.add('hide');
+      });
+
+      const targetIframe = document.querySelector(`iframe[name="${this.target}"]`);
+      if (targetIframe) {
+        targetIframe.classList.remove('hide');
+      }
+    });
+  });
+}); */
+
+
+
+
+
+
+
 /*
 // create DOM references
 const html = document.querySelector('#html');

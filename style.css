@@ -11,6 +11,7 @@ body {
 
 div {
   padding: 0 0.5%;
+  text-wrap: pretty;
   width: 100%;
 }
 
@@ -23,6 +24,7 @@ li {
   margin-left: 2rem;
   line-height: 1.5em;
   text-wrap: pretty;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -36,7 +38,7 @@ h4,
 h5,
 h6 {
   line-height: 2rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: serif;
   color: #a95e42;
 }
 

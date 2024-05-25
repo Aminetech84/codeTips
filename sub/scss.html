@@ -471,5 +471,20 @@ These advanced tips should help you leverage SCSS more effectively in your proje
 
         </code>
     </pre>
+
+    <h4>TIPS FROM COPILOT</h4>
+    <ol>
+      <li><strong>Mobile First: </strong>Start with the mobile version of your design and then expand to larger screens using media queries. This approach is more efficient and helps ensure your site is mobile-friendly from the start.</li>
+      <li><strong>Variables and Mixins: </strong>Use variables for colors, fonts, and other reusable properties. Mixins can be used for common patterns like media queries or animations, making your code DRY (Don't Repeat Yourself).</li>
+      <li><strong>Nesting: </strong>Nest your selectors to keep related styles together, but avoid deep nesting as it can make your CSS harder to read and maintain.</li>
+      <li><strong>Partials and Imports: </strong>Break your code into smaller files (partials) and import them into a main file. This helps organize your code and makes it easier to manage.</li>
+      <li><strong>Extend/Inheritance: </strong>Use `@extend` to share a set of CSS properties from one selector to another. It's a powerful feature that can help you avoid code duplication.</li>
+      <li><strong>Operators for Math: </strong>SCSS allows you to use math operators like `+`, `-`, `*`, and `/` directly in your styles, which can be very handy for calculations.</li>
+      <li><strong>Functions: </strong>Write your own functions for repetitive tasks, like calculating rem values from pixels or creating color shades.</li>
+      <li><strong>Maps: </strong>Use maps for complex configurations like theme settings or icon lists. They work like associative arrays and can be very powerful.</li>
+      <li><strong>Avoid Overuse of `!important`: </strong>While `!important` can be useful in some cases, overusing it can lead to specificity wars and make your styles hard to override.</li>
+      <li><strong>Linting: </strong>Use a SCSS linter to enforce coding standards and catch errors before they make it to the browser.</li>
+    </ol>
+
 </body>
 </html>

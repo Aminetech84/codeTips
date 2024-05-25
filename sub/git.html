@@ -57,16 +57,21 @@ push      Update remote refs along with associated objects
 'git help -a' and 'git help -g' list available subcommands and some
 concept guides. See 'git help <command>' or 'git help <concept>'
     to read about a specific subcommand or concept.</pre>
-    <h4></h4>
-    <p></p>
-    <h4></h4>
-    <p></p>
-    <h4></h4>
-    <p></p>
-    <h4></h4>
-    <p></p>
-    <h4></h4>
-    <p></p>
+    
+    <h4>TIPS FROM COPILOT</h4>
+    <ol>
+      <li><strong>Autocorrection: </strong>Enable Git autocorrection to automatically fix mistyped subcommands. This can save you time and frustration when working with Git commands.</li>
+      <li><strong>Commit Counting: </strong>Use `git rev-list --count` to count your commits. This can be useful for tracking progress or deciding when to increment build numbers.</li>
+      <li><strong>Repository Optimization: </strong>Keep your repository clean with `.gitignore` and use Git's garbage collection with `git gc --prune=now --aggressive` to clean up orphaned objects.</li>
+      <li><strong>Backup Untracked Files: </strong>Before cleaning your working directory, take a backup of untracked files. This ensures you don't lose any important changes.</li>
+      <li><strong>Aliases for Common Commands: </strong>Create aliases for frequently used Git commands to speed up your workflow. For example, `git config --global alias.co checkout` lets you use `git co` instead of `git checkout`.</li>
+      <li><strong>Interactive Staging: </strong>Use `git add -p` to interactively stage specific parts of files. This gives you fine-grained control over what goes into your commits.</li>
+      <li><strong>Clear Commit Messages: </strong>Write clear and concise commit messages. Start with a short summary followed by a detailed explanation if necessary.</li>
+      <li><strong>History Rewriting: </strong>Use `git rebase` to alter commit history, such as squashing multiple commits into one for a cleaner history.</li>
+      <li><strong>Avoid Extra Merge Commits: </strong>Use rebase instead of merge when updating your feature branch to avoid unnecessary merge commits.</li>
+      <li><strong>Stash Wisely: </strong>Use `git stash` to save changes that are not ready to be committed yet. This keeps your working directory clean and allows you to switch branches without losing progress.</li>
+    </ol>
+
 </div>
 </body>
 </html>
